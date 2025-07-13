@@ -93,85 +93,8 @@ The CI/CD workflow (`.github/workflows/ci.yml`) provides:
 The component library (`components/`) provides reusable UI components:
 
 ### Available Components
-
 #### Button Component
-```tsx
-import { Button } from '@/components';
-
-// Basic usage
-<Button variant="primary" onClick={handleClick}>
-  Save Changes
-</Button>
-
-// With loading state
-<Button variant="primary" loading>
-  Saving...
-</Button>
-
-// With icons
-<Button startIcon={<PlusIcon />} variant="secondary">
-  Add Item
-</Button>
-```
-
-**Props:**
-- `variant`: `'primary' | 'secondary' | 'outline' | 'ghost' | 'danger'`
-- `size`: `'small' | 'medium' | 'large'`
-- `loading`: `boolean`
-- `disabled`: `boolean`
-- `fullWidth`: `boolean`
-- `startIcon`, `endIcon`: `React.ReactNode`
-
-#### Input Component
-```tsx
-import { Input } from '@/components';
-
-// Basic usage
-<Input 
-  label="Email" 
-  type="email" 
-  placeholder="Enter your email" 
-/>
-
-// With validation
-<Input 
-  label="Password" 
-  type="password" 
-  error="Password is required" 
-  required
-/>
-
-// With icons
-<Input 
-  label="Search" 
-  startIcon={<SearchIcon />} 
-  placeholder="Search..." 
-/>
-```
-
-**Props:**
-- `type`: `'text' | 'email' | 'password' | 'number' | 'tel' | 'url' | 'search'`
-- `variant`: `'default' | 'filled' | 'outlined'`
-- `size`: `'small' | 'medium' | 'large'`
-- `error`: `string`
-- `helperText`: `string`
-- `required`: `boolean`
-- `disabled`: `boolean`
-- `fullWidth`: `boolean`
-- `startIcon`, `endIcon`: `React.ReactNode`
-
 ### Styling
-
-Components use CSS Modules for styling and follow H4I's design system:
-
-- **Primary color:** `#257E68` (H4I Green)
-- **Typography:** System font stack
-- **Spacing:** Consistent rem-based spacing
-- **Responsive design:** Mobile-first approach
-- **Accessibility:** ARIA attributes and keyboard navigation
-- **Dark mode support:** Automatic detection
-- **Reduced motion support:** Respects user preferences
-
 ### Adding New Components
 
 1. **Create component directory:**
@@ -271,12 +194,6 @@ firebase deploy
 
 ## 🎯 Best Practices
 
-### Code Quality
-- **Use TypeScript** for type safety
-- **Follow ESLint rules** for consistent code style
-- **Write tests** for critical functionality
-- **Use semantic commit messages**
-
 ### Component Design
 - **Keep components focused** on single responsibility
 - **Use composition over inheritance**
@@ -288,53 +205,6 @@ firebase deploy
 - **Document complex business logic**
 - **Include examples** in component documentation
 - **Update changelog** for significant changes
-
-## 🔧 Troubleshooting
-
-### Common Issues
-
-**TypeScript errors in components:**
-```bash
-# Install React types
-npm install --save-dev @types/react @types/react-dom
-```
-
-**CSS modules not working:**
-```bash
-# Ensure your bundler supports CSS modules
-# For Next.js, files should end with .module.css
-```
-
-**Firebase deployment fails:**
-```bash
-# Check if you're logged in
-firebase login
-
-# Verify project configuration
-firebase projects:list
-```
-
-**CI/CD pipeline fails:**
-- Check GitHub Secrets are set correctly
-- Verify Firebase token is valid
-- Review workflow logs for specific errors
-
-## 📞 Support
-
-For questions or issues with the starter kit:
-
-1. **Check existing documentation** first
-2. **Search GitHub issues** for similar problems
-3. **Create a new issue** with:
-   - Clear description of the problem
-   - Steps to reproduce
-   - Expected vs actual behavior
-   - Environment details
-
-**Contact the H4I team:**
-- **Director of Engineering:** [Add contact info]
-- **Technical Leads:** [Add contact info]
-- **Slack:** #h4i-starter-kit
 
 ## 🤝 Contributing
 
