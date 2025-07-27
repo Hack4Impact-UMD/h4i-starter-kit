@@ -127,7 +127,7 @@ Firebase Cloud Functions:
 - `api/`: HTTP API endpoints
 - `triggers/`: Database triggers
 
-## App Router vs Pages Router
+## App Router
 
 ### App Router (Recommended for new projects)
 ```
@@ -140,17 +140,6 @@ src/app/
 └── api/
     └── users/
         └── route.ts     # API endpoint
-```
-
-### Pages Router (Legacy)
-```
-src/pages/
-├── index.tsx            # Home page
-├── dashboard.tsx        # Dashboard page
-├── _app.tsx            # App component
-├── _document.tsx       # Document component
-└── api/
-    └── users.ts        # API endpoint
 ```
 
 ## File Naming Conventions
@@ -243,17 +232,6 @@ module.exports = nextConfig;
 }
 ```
 
-## Best Practices
-
-1. **Use App Router**: For new projects, use the App Router for better performance
-2. **Server Components**: Leverage Server Components for better performance
-3. **Route Groups**: Organize routes logically with route groups
-4. **TypeScript**: Use TypeScript for type safety
-5. **Path Aliases**: Configure path aliases for cleaner imports
-6. **Environment Variables**: Use `.env.local` for environment-specific configs
-7. **Middleware**: Use middleware for authentication and redirects
-8. **Error Boundaries**: Implement error boundaries for better error handling
-
 ## Environment Setup
 
 1. **Create Next.js app**:
@@ -291,5 +269,3 @@ vercel
 npm run build
 firebase deploy
 ```
-
-This structure provides a robust foundation for scalable Next.js applications with Firebase integration, taking advantage of the latest Next.js features and best practices. 

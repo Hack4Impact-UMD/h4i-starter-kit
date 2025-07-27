@@ -171,16 +171,6 @@ export const Dashboard: React.FC = () => {
 };
 ```
 
-## Best Practices
-
-1. **Keep components focused**: Each component should have a single responsibility
-2. **Use absolute imports**: Configure path mapping for cleaner imports
-3. **Organize by feature**: Group related files together
-4. **Consistent naming**: Follow established naming conventions
-5. **Type everything**: Use TypeScript for better code quality
-6. **Document complex logic**: Add comments for business logic
-7. **Test important features**: Write tests for critical functionality
-
 ## Environment Setup
 
 1. **Install dependencies**:
